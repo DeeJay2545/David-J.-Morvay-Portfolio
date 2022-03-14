@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NASA Lunabotics Rover</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">David J. Morvay Portfolio - NASA Lunabotics Rover</a></h1>
+					</header>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>NASA Lunabotics Rover</h2>
+								<p>Senior design and extracurricular project.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Background</h3>
+									<p>The NASA Lunabotics Competition tasks collegiate teams with designing, building, and programming a rover that must traverse a simulated lunar surface as autonomously as possible to mine icy regolith at a secondary ground layer 30 cm below the surface. This rover must meet specified design constraints, including an initial volume of 1 m long, 0.5 m wide, and 0.5 m tall, and a maximum mass of 60 kg. Additionally, the rover must be capable of avoiding or crossing boulders and craters upwards of 50 cm in diameter and depth. Teams are incentivized to optimize the rover's mass, energy usage, communication bandwidth, and dust tolerance to accurately mimic the requirements for a real lunar rover.</p>
+
+									<p>While this was a multidisciplinary project, including seniors from the computer science, mechanical, and electrical engineering programs, my team was responsible for the design, programming, and implementation of all electrical components on the rover. In general, the rover was divided into several electrical subsystems: controls, power management, data communication, networking, GUI software, physical wiring, and autonomy. The electromechanical design consisted of six high-performance brushless motors, two linear actuators, and one stepper motor. For control systems, the rover featured a master-slave configuration, using a Jetson Nano microcontroller and Basys 3 FPGA board. All autonomous or manual controls were transmitted from the Jetson Nano to the FPGA for distribution to the electromechanical systems. Furthermore, all sensory data was captured by the FPGA and sent back to the Jetson Nano for display on a GUI software. Finally, the rover had the ability to be drive autonomously using an IR beacon transmitter and receiver. The rover followed an IR signal as it moved through obstacles and terrain in the competition arena.</p>
+
+									<h3 class="major">My Role</h3>
+									<p>During my senior academic year, I worked with my fellow team members, faculty, and local industry to design and build a robot that would compete in the NASA Lunabotics Competition at Kennedy Space Center in Florida. My technical assignment on the team was to design the communication protocol and controls for the robot using an Artix-7 FPGA board and VHDL. On board the robot, our team utilized a Nvidia Jetson ARM microcontroller to communicate wirelessly from a control room to the competition arena. In addition, we implemented the Artix-7 FPGA board for more expandable I/O and precise motor control using pulse-width modulation. Hence, I was responsible for developing the UART core to enable communication between the Jetson and FPGA. The UART core was constructed in VHDL using two first in, first out buffers for transmitting and receiving information. Essentially, the FPGA would receive eight bytes of data in the receiving FIFO buffer, relay the data to the respective control module, gather any relevant feedback or sensory data, and then transmit a packet of eight bytes of data back to the Jetson from the transmitting FIFO. I was also tasked with creating the motor control algorithm for the robot. I utilized the one-hundred-megahertz system clock on the FPGA to develop precise pulse-width modulation for the stepper motor mining system and the brushless DC motors on our drivetrain. By the completion of the project, our team had created a fully functional robot that was ready to compete against some of the most elite collegiate teams in the country at the NASA Lunabotics Competition. Unfortunately, we were unable to travel and physically compete at Kennedy Space Center because NASA canceled the in-person competition due to COVID-19. Nonetheless, the skills I acquired from this project significantly improved my competence and ingenuity to take a long-term assignment from an idea to a physical product.</p>
+
+									<section class="features">
+										<article>
+											<a href="https://www.youtube.com/watch?v=3CqzYaOA0BM" class="image"><img src="images/rover_sc.png" alt="" /></a>
+											<h3 class="major">Video Demonstration</h3>
+											<p>Quick video showing the operation of our competition robot!</p>
+											<a href="https://www.youtube.com/watch?v=3CqzYaOA0BM" class="special">Watch now!</a>
+										</article>
+                                        <article>
+                                            <a href="https://github.com/DeeJay2545/YSU-NASA-Lunabotics" class="image"><img src="images/YSUR.jpg" alt="" /></a>
+                                            <h3 class="major">Code</h3>
+                                            <p>All VHDL code from the robot. Please contact me with any questions! </p>
+                                            <a href="https://github.com/DeeJay2545/YSU-NASA-Lunabotics" class="special">VHDL Code</a>
+                                        </article>
+										<article>
+											<a href="https://github.com/DeeJay2545/YSU-NASA-Lunabotics#readme" class="image"><img src="images/NASA.png" alt="" /></a>
+											<h3 class="major">Additional Information</h3>
+											<p>Information on the project, including our team's final report. The report includes background on the project, our design choices, and an overview of the rover's subsystems. </p>
+											<a href="https://github.com/DeeJay2545/YSU-NASA-Lunabotics#readme" class="special">Learn more</a>
+										</article>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+                    <!-- Footer -->
+                        <section id="footer">
+                            <div class="inner">
+                                <h2 class="major">Beyond My Projects</h2>
+                                <ul class="contact">
+                                    <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/david-d-j-morvay-b8b8b1170/">LinkedIn</a></li>
+                                    <li class="icon brands fa-github"><a href="https://github.com/DeeJay2545">GitHub</a></li>
+                                    <li class="icon brands fa-instagram"><a href="https://www.instagram.com/djmorv_25/">Instagram</a></li>
+                                </ul>
+                                <ul class="copyright">
+                                    <li>&copy; 2022 - David J. Morvay - All rights reserved.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
